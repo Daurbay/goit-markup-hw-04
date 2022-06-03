@@ -111,42 +111,35 @@ display: block;
 .menu-link:focus{
     color: var(--focus-accent-color);
 }
-.header-contacts-item{display: flex;}
-.header-social-phone{
-    display: block;
-    width: 10px;
-    height: 16px;
-    margin-right: 10px;
-}
-
-.header-social-email{
-    display: block;
-    width: 16px;
-    height: 12px;
-    margin-right: 10px;
-    margin-top: 2px;
-    margin-bottom: 2px;
-}
-.header-contacts-item:not(:last-child){
-    margin-right: 50px;
-}
-.phone-number{
-font-weight: 500;
-font-size: 14px;
-line-height: 1.14;
-
-color: #757575;
-}
-.phone-number:hover,
-.phone-number:focus{
-    color: var(--focus-accent-color);
-}
 
 .header-contacts{
     display: flex;
     justify-content: space-between;
     margin-left: auto;
 }
+.header-contacts-item:not(:last-child){
+    margin-right: 50px;
+}
+
+.phone-number{
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    
+    color: #757575;
+    }
+    .phone-number:hover,
+    .phone-number:focus{
+        color: var(--focus-accent-color);
+    }
+    .header-social-phone{
+        margin-right: 10px;
+    }
+    
+    .phone-number:focus .header-social-phone,
+    .phone-number:hover .header-social-phone{
+       fill: var(--focus-accent-color);
+    }
 
 .email{
     font-weight: 500;
@@ -156,10 +149,22 @@ color: #757575;
     
     color: #757575;
     }
-    .email:hover,
-    .email:focus{
-        color: #2196F3;
-    }
+
+.email:hover,
+.email:focus{
+    color: var(--focus-accent-color);
+}
+
+.header-social-email{
+    margin-right: 10px;
+ }
+
+.email:focus .header-social-email,
+.email:hover .header-social-email{
+   fill: var(--focus-accent-color);
+}
+
+ /* Hero  */
 
     /* Main selection */
 
@@ -170,6 +175,8 @@ color: #757575;
         text-align: center;
         padding-top: 200px;
         padding-bottom: 200px;
+        width: 1600px;
+        margin: auto;
     }
    
     .main-title{
@@ -214,15 +221,17 @@ color: #757575;
         .our-features-item:not(:last-child){
         margin-right: 30px;
     }
-    
-    .our-features-img{
-        background-color: var(--background-color-team-section);
-        width: 270px;
-        height: 120px;
-        margin-bottom: 30px;
-        border-radius: 4px;
-        padding: 25px 100px 25px 100px;
-    }
+
+.our-features-item-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--background-color-team-section);
+    width: 270px;
+    height: 120px;
+    margin-bottom: 30px;
+    border-radius: 4px;
+}
 
 .features-title{
     font-weight: 700;
@@ -231,6 +240,7 @@ color: #757575;
     text-transform: uppercase;
     letter-spacing: 0.03em;
     }
+    
 .description{
     font-weight: 400;
     font-size: 14px;
@@ -315,7 +325,7 @@ padding-bottom: 30px;
 .social-list{
     display: flex;
     justify-content: center;
-    margin-bottom: 30px;
+    margin-top: 16px;
 }
 
 .social-list-link{
@@ -345,15 +355,17 @@ padding-bottom: 30px;
     fill: #AFB1B8;
 }
 
+.constant-clients{
+    padding-top: 94px;
+    padding-bottom: 94px;}
+    
 .constant-clients-div{
-    margin-top: 94px;
-    margin-bottom: 94px;
 }
 
-.constant-clients{
+.constant-clients-title{
 font-weight: 700;
 font-size: 36px;
-line-height: 1.17;
+line-height: 1,16;
 text-align: center;
 letter-spacing: 0.03em;
 margin-bottom: 50px;
@@ -361,17 +373,20 @@ margin-bottom: 50px;
 
 .clients-list{
     display: flex;
-    justify-content: center;
 }
 
 .clients-item{
+    width: 170px;
+    height: 92px;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 170px;
-    height: 92px;
     border: 1px solid #AFB1B8;
     border-radius: 4px;
+   }
+
+.clients-item:not(:last-child){
+    margin-right: 30px;
 }
 
 .clients-item:hover,
@@ -379,13 +394,20 @@ margin-bottom: 50px;
     border: 1px solid #2196F3;
     cursor: pointer
 }
-.client{
-    padding: 16px 32px 16px 32px;
+
+.clients-link{
+
 }
 
-.clients-item:not(:last-child){
-    margin-right: 30px;
+.client{
+    fill: #AFB1B8;
 }
+.clients-item:hover .client,
+.clients-item:focus .client{
+fill: var(--focus-accent-color);
+}
+
+
 
  /* Footer */
  .footer-section{
@@ -442,6 +464,7 @@ margin-bottom: 50px;
 
 .footer-section-div{
     display: flex;
+    align-items: center;
 }
 
 .footer-social-links{
@@ -506,14 +529,14 @@ color: var(--logo-black-theme-color)
 .portfolio-item:focus{
     background-color: var(--focus-accent-color);
     color: var(--buttons-focus-color);
-    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-}
+    }
 
 .portfolio-btn:hover,
 .portfolio-btn:focus{
     background-color: var(--focus-accent-color);
     color: var(--buttons-focus-color);
     border-radius: 4px;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .portfolio-btn{
